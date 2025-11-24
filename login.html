@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login - RDH Store</title>
+    <link rel="stylesheet" href="loginc.css">
+     <link rel="icon" type="image/x-icon" href="store logo.png">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>RDH Store Login</h2>
+
+        <form>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <div class="extra-options">
+                <label><input type="checkbox" id="showPass"> Show Password</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <p class="note">Don't have an account? <a href="#">Create one</a></p>
+    </div>
+
+<script>
+    document.getElementById("showPass").onclick = function() {
+        let pass = document.getElementById("password");
+        pass.type = pass.type === "password" ? "text" : "password";
+    };
+</script>
+
+</body>
+</html>
